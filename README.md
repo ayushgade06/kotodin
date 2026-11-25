@@ -1,6 +1,6 @@
 # Kotodin (কতদিন) — every arsenic filter runs out. Kotodin tells you when.
 
-**Live app:** _LIVE_URL_ · **SDG targets:** 6.1, 3.9, 6.b · **Licence:** MIT
+**Live app:** https://kotodin-cyan.vercel.app · **SDG targets:** 6.1, 3.9, 6.b · **Licence:** MIT
 
 ![Kotodin landing page](docs/screens/landing.png)
 

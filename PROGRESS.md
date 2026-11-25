@@ -1,6 +1,6 @@
 # Progress
 
-Live URL: _LIVE_URL_ · Repo: https://github.com/ayushgade06/kotodin
+Live URL: https://kotodin-cyan.vercel.app · Repo: https://github.com/ayushgade06/kotodin
 
 | Milestone | Status | Notes |
 |---|---|---|
@@ -14,7 +14,7 @@ Live URL: _LIVE_URL_ · Repo: https://github.com/ayushgade06/kotodin
 | M8 Card & stickers | ✅ | Bangla-first card, Bangla numerals, tampered payload → error. A4 8-up sticker sheet. **Manual phone QR scan still to do (user)** |
 | M9 Design Lab | ✅ | Sweep ≈ 3 ms / 3,534 wells. Params in URL. Headline (250 g, 5 × 5 L, central): 75.5% < 30 days, median 27.8 days, 13.1 pouches & ৳1,968 / household / year; 58% of wells need no filter; 394 g reaches 90% ≥ 30 days (cautious: 1,853 g) |
 | M10 Landing & Methods | ✅ | Cited stats with working links; every assumption labelled; no-affiliation and AI disclosures |
-| M11 Reliability / PWA / a11y | ✅ (partial checks) | PWA precaches app + wells.json; error boundary per route; corrupt-storage recovery; stock forecast; WhatsApp share; mobile overflow bugs fixed. Lighthouse scores: see below |
+| M11 Reliability / PWA / a11y | ✅ | PWA precaches app + wells.json; error boundary per route; corrupt-storage recovery; stock forecast; WhatsApp share; mobile overflow bugs fixed. Lighthouse scores: see below |
 | M12 Deploy & submission | ✅ | README, SUBMISSION.md, VIDEO_SCRIPT.md, screenshots in docs/screens |
 
 ## Test status
@@ -25,4 +25,4 @@ Live URL: _LIVE_URL_ · Repo: https://github.com/ayushgade06/kotodin
 ## Known issues / manual checks remaining
 - Scan a printed sticker with a real phone camera (QR verified only by decoding round-trip tests and the card route e2e).
 - Print preview of the sticker sheet in a real browser print dialog.
-- Offline check after first visit on a phone.
+- Offline verified on the live site in desktop Chromium (program, lab, landing load with network off); not yet checked on a real phone.

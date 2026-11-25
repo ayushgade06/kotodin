@@ -2,7 +2,7 @@
 
 **Tagline:** Every arsenic filter runs out. Kotodin tells you when.
 
-**Links:** Live app _LIVE_URL_ · Source https://github.com/ayushgade06/kotodin
+**Links:** Live app https://kotodin-cyan.vercel.app · Source https://github.com/ayushgade06/kotodin
 
 **Built with:** TypeScript, React, Vite, Tailwind CSS, Leaflet, OpenStreetMap, qrcode, vite-plugin-pwa, Vitest, Playwright, DPHE/BGS National Hydrochemical Survey data.
 
