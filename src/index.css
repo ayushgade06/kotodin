@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', 'Noto Sans Bengali', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', 'Noto Sans Bengali', Georgia, serif;
+  --font-bn: 'Noto Sans Bengali', 'Inter Variable', sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --color-ink: #0f1b24;
+  --color-ink-2: #34424d;
+  --color-paper: #f7f5f0;
+  --color-paper-2: #efebe3;
+  --color-surface: #ffffff;
+  --color-line: #e2ddd2;
+  --color-line-strong: #cdc6b8;
+  --color-muted: #5f6873;
+  --color-water: #1c6e8c;
+  --color-water-ink: #145569;
+  --color-water-50: #e7f0f3;
+  --color-water-100: #cfe2e9;
+  --color-ok: #2e7d4f;
+  --color-ok-50: #e8f2ec;
+  --color-due: #b7791f;
+  --color-due-ink: #85560f;
+  --color-due-50: #f8efdf;
+  --color-bad: #b42318;
+  --color-bad-50: #f9e9e7;
+  --color-grey: #7a828b;
+  --color-grey-50: #eeede9;
+
+  --radius-card: 12px;
+  --shadow-pop: 0 1px 2px rgb(15 27 36 / 0.06), 0 8px 24px -6px rgb(15 27 36 / 0.18);
+  --shadow-soft: 0 1px 0 rgb(15 27 36 / 0.04);
+
+  --animate-flash: flash 1.6s ease-out 1;
+  --animate-rise: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-toast: toast-in 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes flash {
+    0% { background-color: rgb(183 121 31 / 0.32); }
+    100% { background-color: transparent; }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes toast-in {
+    from { opacity: 0; transform: translateY(12px) scale(0.98); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  [lang='bn'] { font-family: var(--font-bn); }
+  :focus-visible { outline: 2px solid var(--color-water); outline-offset: 2px; border-radius: 4px; }
+  ::selection { background: var(--color-water-100); }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  a { color: inherit; }
+  summary { cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
+  dialog::backdrop { background: rgb(15 27 36 / 0.45); backdrop-filter: blur(2px); }
+}
+
+@utility tnum { font-variant-numeric: tabular-nums; }
+@utility display { font-family: var(--font-display); font-optical-sizing: auto; letter-spacing: -0.02em; }
+@utility eyebrow { font-size: 11px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-muted); }
+
+/* Leaflet: match the app's type and quiet the chrome */
+.leaflet-container { font-family: var(--font-sans); background: #e9e6df; border-radius: inherit; }
+.leaflet-control-attribution { font-size: 10px; }
+.leaflet-tooltip { font-family: var(--font-sans); font-size: 12px; border-radius: 6px; border-color: var(--color-line); box-shadow: var(--shadow-pop); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+@media print {
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  @page { size: A4; margin: 10mm; }
+}
+
+/* Quiet the OSM basemap so status markers carry the colour */
+.leaflet-tile-pane { filter: grayscale(0.85) sepia(0.12) contrast(0.92) brightness(1.04); }

@@ -1,0 +1,54 @@
+{
+  "name": "kotodin",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "data": "tsx scripts/build-wells.ts",
+    "pretest": "npm run data",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc -b",
+    "build": "npm run data && tsc -b && vite build",
+    "preview": "vite preview",
+    "shots": "tsx scripts/shots.ts",
+    "icons": "tsx scripts/make-icons.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/noto-sans-bengali": "^5.3.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.80.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "^7.18.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/vite": "^4.3.5",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/leaflet": "^1.9.23",
+    "@types/node": "^26.6.10",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "csv-parse": "^7.0.3",
+    "jsdom": "^31.0.1",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

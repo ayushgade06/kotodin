@@ -1,0 +1,13 @@
+node_modules
+dist
+dev-dist
+data/raw
+public/data/wells.json
+public/data/wells.meta.json
+test-results
+playwright-report
+.vercel
+.env
+.env.*
+!.env.example
+*.local

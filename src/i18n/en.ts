@@ -1,0 +1,46 @@
+export const en = {
+  'nav.program': 'Program',
+  'nav.lab': 'Design Lab',
+  'nav.methods': 'Methods & Limits',
+  'nav.skip': 'Skip to content',
+  'lang.toggle': 'বাংলা',
+  'lang.toggleLabel': 'Switch language to Bangla',
+
+  'footer.disclaimer': 'A planning aid, not a safety certification. Only a water test confirms that water is safe.',
+  'footer.data': 'Well data: DPHE/BGS National Hydrochemical Survey (1998–99). Contains British Geological Survey materials © UKRI. Map data © OpenStreetMap contributors.',
+  'footer.affil': 'Independent student project. Not affiliated with or endorsed by KeebsforWater, PureHusk, BGS or DPHE.',
+  'footer.license': 'Code: MIT licence.',
+
+  'status.ok': 'OK',
+  'status.due': 'Due this week',
+  'status.overdue': 'Overdue',
+  'status.failed': 'Breakthrough',
+  'status.not_needed': 'No filter needed',
+  'status.unknown_influent': 'Test the well',
+
+  'demo.banner': 'Demo data: households are synthetic; arsenic values are real 1998–99 survey wells.',
+
+  'hero.title': 'A filter that has stopped working looks exactly like one that hasn’t.',
+  'hero.sub': 'Kotodin forecasts how many days each household arsenic filter has left, puts that countdown on a QR sticker, and tells the program team who to visit this week. Every field test makes the forecast better.',
+
+  'card.title': 'Your filter pouch',
+  'card.daysLeft': 'days left',
+  'card.dayLeft': 'day left',
+  'card.changeNow': 'Change the pouch now',
+  'card.overdueBy': '{n} days past the change date',
+  'card.replaceBy': 'Change the pouch by {date}',
+  'card.installed': 'Pouch put in on {date}',
+  'card.instr1': 'When the number reaches 0, the pouch must be changed. The water will not look or taste different.',
+  'card.instr2': 'Ask your field worker to test the filtered water.',
+  'card.instr3': 'Use filtered water for drinking and cooking.',
+  'card.notNeeded': 'Your well tested at or below 10 µg/L arsenic. A filter is not needed for arsenic.',
+  'card.invalid': 'This sticker can’t be read. Ask your field worker.',
+  'card.how': 'How is this calculated?',
+  'card.howBody': 'Estimated from your well’s arsenic ({c0} µg/L), about {lpd} litres a day, and a {m} g pouch. The countdown uses the cautious end of the estimate. It cannot know about tests done after this sticker was printed.',
+  'card.estimate': 'This is an estimate, not a water test.',
+  'card.household': 'Household',
+  'card.openApp': 'About Kotodin',
+
+  'sticker.scan': 'Scan to see how many days your filter has left',
+  'sticker.replaceBy': 'Change by',
+} as const;
